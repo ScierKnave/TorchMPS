@@ -240,8 +240,8 @@ class TI_MPS(nn.Module):
                 )
             embedded_data = torch.empty(embedded_shape)
 
-            embedded_data[:, :, 0] = input_data
-            embedded_data[:, :, 1] = 1 - input_data
+            embedded_data[:, :, 0] = 1
+            embedded_data[:, :, 1] = input_data
 
         return embedded_data
 
